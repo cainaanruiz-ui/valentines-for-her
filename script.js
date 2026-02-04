@@ -14,9 +14,9 @@ const MAX_DODGES = 5;
 // Put your JPG names here EXACTLY as they are in /assets
 // I added the 8 you sent. Add your last 2 where noted.
 const photoFiles = [
+  "IMG_5695.jpg",
   "IMG_5719.jpg",
   "IMG_5784.jpg",
-  "IMG_5695.jpg",
   "IMG_6140.jpg",
   "IMG_7121.jpg",
   "IMG_7663.jpg",
