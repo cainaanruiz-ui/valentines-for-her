@@ -21,7 +21,10 @@ body{
     radial-gradient(circle at 50% 92%, #ffe9f3, transparent 55%),
     linear-gradient(180deg, var(--pink3), #ffffff);
   padding:24px;
-  overflow:hidden;
+
+  /* ✅ allow scrolling again (but prevent sideways scroll) */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Floating photo collage */
@@ -30,6 +33,9 @@ body{
   inset: 0;
   pointer-events: none;
   z-index: 0;
+
+  /* ✅ prevents floating images from creating weird scroll/overflow */
+  overflow: hidden;
 }
 
 .float-img{
@@ -150,7 +156,12 @@ p{
 .kiss-img{
   margin: 14px auto 0;
   display:block;
-  width:min(440px, 92%);
+
+  /* ✅ responsive so it never overflows */
+  max-width: 100%;
+  width: min(440px, 92vw);
+  height: auto;
+
   border-radius: 18px;
   border: 2px solid rgba(255,79,160,.22);
   box-shadow: 0 18px 40px rgba(255, 79, 160, .14);
@@ -168,3 +179,4 @@ p{
   from{ transform: scale(.96); opacity:.2; }
   to{ transform: scale(1); opacity:1; }
 }
+
